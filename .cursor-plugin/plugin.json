@@ -1,0 +1,16 @@
+{
+  "name": "ai-humanizer",
+  "displayName": "AI Humanizer",
+  "version": "0.1.0",
+  "description": "Make AI-generated content undetectable. Rules that prevent em dashes, buzzwords, over-formatting, narrating comments, git co-author trailers, and uniform sentence structure.",
+  "author": {
+    "name": "Ofer Shapira",
+    "email": "ofer@shapira.dev",
+    "url": "https://github.com/ofershap"
+  },
+  "homepage": "https://github.com/ofershap/ai-humanizer",
+  "repository": "https://github.com/ofershap/ai-humanizer",
+  "license": "MIT",
+  "keywords": ["ai-humanizer", "humanize", "ai-detection", "writing", "cursor-plugin", "claude-code"],
+  "logo": "assets/logo.svg"
+}

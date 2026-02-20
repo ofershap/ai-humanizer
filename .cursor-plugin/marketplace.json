@@ -1,0 +1,18 @@
+{
+  "name": "ai-humanizer",
+  "owner": {
+    "name": "Ofer Shapira",
+    "email": "ofer@shapira.dev"
+  },
+  "metadata": {
+    "description": "Make AI-generated content undetectable. Rules that prevent em dashes, buzzwords, over-formatting, narrating comments, git co-author trailers, and uniform sentence structure.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "ai-humanizer",
+      "source": ".",
+      "description": "Make AI-generated content undetectable. Rules that prevent em dashes, buzzwords, over-formatting, narrating comments, git co-author trailers, and uniform sentence structure."
+    }
+  ]
+}

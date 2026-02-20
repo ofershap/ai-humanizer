@@ -1,0 +1,24 @@
+{
+  "name": "ai-humanizer",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Make AI-generated content undetectable. Rules that prevent em dashes, buzzwords, over-formatting, narrating comments, git co-author trailers, and uniform sentence structure.",
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "keywords": ["ai-humanizer", "humanize", "ai-detection", "writing", "cursor-plugin", "claude-code", "ai-agent", "readme"],
+  "author": {
+    "name": "Ofer Shapira",
+    "url": "https://github.com/ofershap"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ofershap/ai-humanizer.git"
+  },
+  "devDependencies": {
+    "prettier": "^3.4.0"
+  }
+}
