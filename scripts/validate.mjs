@@ -41,17 +41,21 @@ function parseFrontmatter(content) {
 
   const block = normalized.slice(4, closing);
   const fields = {};
+  let currentKey = null;
   for (const line of block.split("\n")) {
-    const match = line.match(/^(\w[\w-]*):\s*(.+)$/);
-    if (match) fields[match[1]] = match[2].trim();
+    const match = line.match(/^(\w[\w-]*):\s*(.*)$/);
+    if (match) {
+      currentKey = match[1];
+      fields[currentKey] = match[2].trim();
+    } else if (currentKey && /^\s+\S/.test(line)) {
+      fields[currentKey] += " " + line.trim();
+    }
   }
   return fields;
 }
 
 async function validatePlugin() {
-  const pluginJson = await readJson(
-    path.join(root, ".cursor-plugin", "plugin.json"),
-  );
+  const pluginJson = await readJson(path.join(root, ".cursor-plugin", "plugin.json"));
   if (!pluginJson) {
     error(".cursor-plugin/plugin.json is missing or invalid");
     return;
@@ -89,8 +93,7 @@ async function validatePlugin() {
         error(`Skill ${skill}/SKILL.md is missing frontmatter`);
       } else {
         if (!fm.name) error(`Skill ${skill}/SKILL.md missing name in frontmatter`);
-        if (!fm.description)
-          error(`Skill ${skill}/SKILL.md missing description in frontmatter`);
+        if (!fm.description) error(`Skill ${skill}/SKILL.md missing description in frontmatter`);
       }
     }
     console.log(`  Skills: ${skills.length} found`);
@@ -115,9 +118,7 @@ async function validatePlugin() {
 
   const commandsDir = path.join(root, "commands");
   if (await exists(commandsDir)) {
-    const commands = (await fs.readdir(commandsDir)).filter((f) =>
-      f.endsWith(".md"),
-    );
+    const commands = (await fs.readdir(commandsDir)).filter((f) => f.endsWith(".md"));
     for (const cmd of commands) {
       const content = await fs.readFile(path.join(commandsDir, cmd), "utf8");
       const fm = parseFrontmatter(content);
@@ -125,8 +126,7 @@ async function validatePlugin() {
         error(`Command ${cmd} missing frontmatter`);
       } else {
         if (!fm.name) error(`Command ${cmd} missing name in frontmatter`);
-        if (!fm.description)
-          error(`Command ${cmd} missing description in frontmatter`);
+        if (!fm.description) error(`Command ${cmd} missing description in frontmatter`);
       }
     }
     console.log(`  Commands: ${commands.length} found`);
@@ -134,9 +134,7 @@ async function validatePlugin() {
 
   const agentsDir = path.join(root, "agents");
   if (await exists(agentsDir)) {
-    const agents = (await fs.readdir(agentsDir)).filter((f) =>
-      f.endsWith(".md"),
-    );
+    const agents = (await fs.readdir(agentsDir)).filter((f) => f.endsWith(".md"));
     for (const agent of agents) {
       const content = await fs.readFile(path.join(agentsDir, agent), "utf8");
       const fm = parseFrontmatter(content);
@@ -144,8 +142,7 @@ async function validatePlugin() {
         error(`Agent ${agent} missing frontmatter`);
       } else {
         if (!fm.name) error(`Agent ${agent} missing name in frontmatter`);
-        if (!fm.description)
-          error(`Agent ${agent} missing description in frontmatter`);
+        if (!fm.description) error(`Agent ${agent} missing description in frontmatter`);
       }
     }
     console.log(`  Agents: ${agents.length} found`);

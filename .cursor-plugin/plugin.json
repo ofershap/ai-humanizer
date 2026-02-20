@@ -11,6 +11,13 @@
   "homepage": "https://github.com/ofershap/ai-humanizer",
   "repository": "https://github.com/ofershap/ai-humanizer",
   "license": "MIT",
-  "keywords": ["ai-humanizer", "humanize", "ai-detection", "writing", "cursor-plugin", "claude-code"],
+  "keywords": [
+    "ai-humanizer",
+    "humanize",
+    "ai-detection",
+    "writing",
+    "cursor-plugin",
+    "claude-code"
+  ],
   "logo": "assets/logo.svg"
 }

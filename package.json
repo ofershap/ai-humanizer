@@ -8,7 +8,16 @@
     "format": "prettier --write .",
     "format:check": "prettier --check ."
   },
-  "keywords": ["ai-humanizer", "humanize", "ai-detection", "writing", "cursor-plugin", "claude-code", "ai-agent", "readme"],
+  "keywords": [
+    "ai-humanizer",
+    "humanize",
+    "ai-detection",
+    "writing",
+    "cursor-plugin",
+    "claude-code",
+    "ai-agent",
+    "readme"
+  ],
   "author": {
     "name": "Ofer Shapira",
     "url": "https://github.com/ofershap"
