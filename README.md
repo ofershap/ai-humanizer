@@ -1,7 +1,7 @@
 # AI Humanizer
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Skills](https://img.shields.io/badge/skills.sh-ai--humanizer-blue)](https://skills.sh/ofershap/ai-humanizer/ai-humanizer)
+[![Skills](https://img.shields.io/badge/skills.sh-ai--humanizer-blue)](https://skills.sh/ofershap/ai-humanizer)
 
 Make AI-generated content undetectable. Prevents the patterns AI detectors and experienced developers flag - em dashes, buzzwords, over-formatting, narrating comments, git co-author trailers, and uniform sentence structure.
 
@@ -12,7 +12,7 @@ Make AI-generated content undetectable. Prevents the patterns AI detectors and e
 ### Cursor / Claude Code / Windsurf
 
 ```bash
-npx skills add ofershap/ai-humanizer/ai-humanizer
+npx skills add ofershap/ai-humanizer
 ```
 
 Or copy `skills/` into your `.cursor/skills/` or `.claude/skills/` directory.
