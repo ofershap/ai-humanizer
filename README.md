@@ -41,6 +41,10 @@ Or copy `skills/` into your `.cursor/skills/` or `.claude/skills/` directory.
 
 - [think-first](https://github.com/ofershap/think-first) - Plan-first workflow (pairs well with humanized output)
 
+---
+
+If this helped your workflow, a star helps others find it.
+
 ## Author
 
 [![Made by ofershap](https://gitshow.dev/api/card/ofershap)](https://gitshow.dev/ofershap)
